@@ -24,7 +24,8 @@ const (
 )
 
 func DuplicateSlide(pptRootPath, slideName string)(newSlideName string, err error){
-	newSlideName = uuid.NewV4().String() + ".xml"
+	u, _ := uuid.NewV4()
+	newSlideName = u.String() + ".xml"
 	newSlideName = "slilde2.xml"
 
 	slidePath := filepath.Join(pptRootPath, c.PPTFolder, c.SlideFolder, slideName)
